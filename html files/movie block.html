@@ -1,0 +1,18 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+	{% for i in movies %}
+	<div v-for="i in movies" class="col">
+		<div class="card">
+			<img class="card-img-top" src="{{ i.image.url }}" />
+			<div class="card-body">
+				<h5 class="card-title fw-bold">{{ i.title }}</h5>
+				<p class="card-text">{{ i.description }}</p>
+				{% if i.url %}
+					<a href="{{ i.url }}" class="btn btn-primary">
+						Movie Link
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
